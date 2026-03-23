@@ -1,0 +1,3660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Amrutha Next Gen Solutions - Mainframe & AI Academy. IBM Mainframe Training in India with 100% Placement Assistance. AI Training with Placement for freshers and working professionals." />
+  <meta name="keywords"
+    content="IBM Mainframe Training in India, AI Training with Placement, COBOL Training, JCL Training, Mainframe Course India, AI Machine Learning Course, Placement Assistance" />
+  <meta name="author" content="Amrutha Next Gen Solutions" />
+  <meta property="og:title" content="Amrutha Next Gen Solutions - Mainframe & AI Academy" />
+  <meta property="og:description" content="Launch Your Career in IBM Mainframe & AI with 100% Placement Assistance" />
+  <meta property="og:type" content="website" />
+  <title>Amrutha Next Gen Solutions - Mainframe & AI Academy</title>
+  <meta name="theme-color" content="#6366f1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --primary: #6366f1;
+      --primary-dark: #4f46e5;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --dark: #07070a;
+      --dark2: #0f0f1b;
+      --dark3: #14142b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
+      --gradient2: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+      --radius: 20px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── LOADER ── */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: var(--dark2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      transition: opacity .5s ease;
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .loader-bar {
+      width: 200px;
+      height: 3px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .loader-fill {
+      height: 100%;
+      width: 0;
+      background: var(--gradient);
+      border-radius: 99px;
+      animation: load 1.8s ease forwards;
+    }
+
+    @keyframes load {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 16px 0;
+      transition: all .3s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(15, 14, 23, .92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 10px 0;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .nav-logo-text {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .nav-logo-text span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 500;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 99px;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all .25s ease;
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--glass-border);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--glass);
+      border-color: var(--primary);
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, .5);
+    }
+
+    .btn-lg {
+      padding: 14px 32px;
+      font-size: 1rem;
+    }
+
+    .btn-accent {
+      background: var(--gradient2);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, .4);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 99px;
+      transition: all .3s;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: radial-gradient(ellipse 80% 70% at 50% -10%, rgba(99, 102, 241, .25) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 60%, rgba(6, 182, 212, .15) 0%, transparent 50%),
+        var(--dark2);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 0;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(99, 102, 241, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, .05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, .15);
+      border: 1px solid rgba(99, 102, 241, .3);
+      border-radius: 99px;
+      padding: 6px 16px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #a5b4fc;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .4
+      }
+    }
+
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero-title .grad {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-card-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      margin: auto;
+    }
+
+    .hero-main-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 20%, rgba(99, 102, 241, .2), transparent 60%);
+    }
+
+    .terminal {
+      background: rgba(0, 0, 0, .5);
+      border-radius: 12px;
+      padding: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: .85rem;
+      line-height: 1.8;
+      border: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .terminal-bar {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .terminal-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .t-red {
+      background: #ff5f57;
+    }
+
+    .t-yellow {
+      background: #febc2e;
+    }
+
+    .t-green {
+      background: #28c840;
+    }
+
+    .t-line {
+      color: #94a3b8;
+    }
+
+    .t-cmd {
+      color: #6ee7b7;
+    }
+
+    .t-out {
+      color: #a5b4fc;
+    }
+
+    .t-highlight {
+      color: #fbbf24;
+    }
+
+    .float-badge {
+      position: absolute;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(12px);
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+      animation: floatY 4s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    .float-badge.fb1 {
+      top: -10px;
+      right: -10px;
+      animation-delay: 0s;
+    }
+
+    .float-badge.fb2 {
+      bottom: -10px;
+      left: -10px;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes floatY {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-10px)
+      }
+    }
+
+    .fb-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+    }
+
+    .fb-text .fb-title {
+      font-size: .78rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .fb-text .fb-sub {
+      font-size: .7rem;
+      color: var(--text-muted);
+    }
+
+    /* ── SECTIONS COMMON ── */
+    section {
+      padding: 90px 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, .12);
+      border: 1px solid rgba(99, 102, 241, .25);
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-size: .78rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-title .grad {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-sub {
+      margin: 0 auto;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--dark3);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .about-points {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .about-point {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .point-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(99, 102, 241, .15);
+      border: 1px solid rgba(99, 102, 241, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a5b4fc;
+      font-size: .95rem;
+      flex-shrink: 0;
+    }
+
+    .point-title {
+      font-weight: 700;
+      font-size: .95rem;
+      margin-bottom: 4px;
+    }
+
+    .point-desc {
+      font-size: .85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .about-visual {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 160px;
+      height: 160px;
+      background: radial-gradient(circle, rgba(99, 102, 241, .2), transparent 70%);
+    }
+
+    .industry-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .chip {
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: .82rem;
+      font-weight: 600;
+      border: 1px solid;
+    }
+
+    .chip-blue {
+      background: rgba(99, 102, 241, .1);
+      border-color: rgba(99, 102, 241, .3);
+      color: #a5b4fc;
+    }
+
+    .chip-cyan {
+      background: rgba(6, 182, 212, .1);
+      border-color: rgba(6, 182, 212, .3);
+      color: #67e8f9;
+    }
+
+    .chip-yellow {
+      background: rgba(245, 158, 11, .1);
+      border-color: rgba(245, 158, 11, .3);
+      color: #fcd34d;
+    }
+
+    .chip-green {
+      background: rgba(34, 197, 94, .1);
+      border-color: rgba(34, 197, 94, .3);
+      color: #86efac;
+    }
+
+    .demand-stat {
+      margin-top: 28px;
+      padding: 20px;
+      background: rgba(0, 0, 0, .3);
+      border-radius: 14px;
+      border: 1px solid var(--glass-border);
+    }
+
+    .demand-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ── COURSES ── */
+    #courses {
+      background: var(--dark2);
+    }
+
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .course-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 28px;
+      cursor: pointer;
+      transition: all .3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .course-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity .3s;
+      border-radius: 20px;
+    }
+
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(99, 102, 241, .25);
+      border-color: rgba(99, 102, 241, .4);
+    }
+
+    .course-card:hover::before {
+      opacity: .06;
+    }
+
+    .course-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .ci-blue {
+      background: linear-gradient(135deg, rgba(99, 102, 241, .3), rgba(99, 102, 241, .1));
+    }
+
+    .ci-cyan {
+      background: linear-gradient(135deg, rgba(6, 182, 212, .3), rgba(6, 182, 212, .1));
+    }
+
+    .ci-yellow {
+      background: linear-gradient(135deg, rgba(245, 158, 11, .3), rgba(245, 158, 11, .1));
+    }
+
+    .ci-green {
+      background: linear-gradient(135deg, rgba(34, 197, 94, .3), rgba(34, 197, 94, .1));
+    }
+
+    .course-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .course-desc {
+      font-size: .85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: .72rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: var(--text-muted);
+    }
+
+    .course-duration {
+      margin-top: 16px;
+      font-size: .8rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── FEATURES ── */
+    #features {
+      background: var(--dark3);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .feature-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      transition: all .3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(99, 102, 241, .4);
+      box-shadow: 0 20px 50px rgba(99, 102, 241, .2);
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 0 auto 18px;
+    }
+
+    .feature-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-desc {
+      font-size: .85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── PLACEMENT ── */
+    #placement {
+      background: var(--dark2);
+    }
+
+    .placement-inner {
+      margin-top: 60px;
+    }
+
+    .companies-label {
+      font-size: .85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .companies-track-wrap {
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .companies-track-wrap::before,
+    .companies-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100px;
+      z-index: 2;
+    }
+
+    .companies-track-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, var(--dark2), transparent);
+    }
+
+    .companies-track-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, var(--dark2), transparent);
+    }
+
+    .companies-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll-track 22s linear infinite;
+      width: max-content;
+    }
+
+    .companies-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-track {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .company-logo {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: .88rem;
+      white-space: nowrap;
+      color: var(--text-muted);
+      transition: all .3s;
+    }
+
+    .company-logo:hover {
+      border-color: rgba(99, 102, 241, .4);
+      color: #fff;
+    }
+
+    .company-logo i {
+      font-size: 1rem;
+    }
+
+    /* ── ACTION TICKER ── */
+    #action-connect {
+      background: var(--dark);
+      padding: 40px 0;
+      border-top: 1px solid var(--glass-border);
+      overflow: hidden;
+    }
+
+    .action-ticker-wrap {
+      position: relative;
+    }
+
+    .action-ticker {
+      display: flex;
+      gap: 30px;
+      animation: scroll-track 30s linear infinite;
+      width: max-content;
+    }
+
+    .action-ticker:hover {
+      animation-play-state: paused;
+    }
+
+    .action-ticker-btn {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 99px;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: .95rem;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all .3s;
+    }
+
+    .action-ticker-btn:hover {
+      background: var(--gradient);
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, .3);
+    }
+
+    .atb-whatsapp {
+      border-color: rgba(37, 211, 102, .3);
+    }
+
+    .atb-whatsapp:hover {
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, .3);
+    }
+
+    .atb-signup {
+      border-color: rgba(245, 158, 11, .3);
+    }
+
+    .atb-signup:hover {
+      background: var(--gradient2);
+      box-shadow: 0 10px 30px rgba(245, 158, 11, .3);
+    }
+
+    .salary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .salary-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .salary-card::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99, 102, 241, .2), transparent);
+    }
+
+    .salary-role {
+      font-size: .82rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .salary-amount {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .salary-range {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials {
+      background: var(--dark3);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    .testi-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: all .3s;
+    }
+
+    .testi-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(99, 102, 241, .35);
+    }
+
+    .testi-stars {
+      display: flex;
+      gap: 4px;
+      color: #fbbf24;
+      font-size: .9rem;
+      margin-bottom: 14px;
+    }
+
+    .testi-text {
+      font-size: .9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testi-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .testi-name {
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .testi-role {
+      font-size: .78rem;
+      color: var(--text-muted);
+    }
+
+    .testi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(34, 197, 94, .1);
+      border: 1px solid rgba(34, 197, 94, .25);
+      border-radius: 99px;
+      padding: 2px 10px;
+      font-size: .7rem;
+      font-weight: 600;
+      color: #86efac;
+      margin-top: 4px;
+    }
+
+    /* ── CURRICULUM ── */
+    #curriculum {
+      background: var(--dark2);
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--primary), var(--secondary));
+      opacity: .3;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 80px 1fr;
+      gap: 0;
+      margin-bottom: 50px;
+      align-items: start;
+    }
+
+    .timeline-content {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      padding: 24px;
+      transition: all .3s;
+    }
+
+    .timeline-content:hover {
+      border-color: rgba(99, 102, 241, .4);
+      transform: scale(1.02);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      grid-column: 1;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-empty {
+      grid-column: 3;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      grid-column: 3;
+      order: 3;
+    }
+
+    .timeline-item:nth-child(even) .timeline-empty {
+      grid-column: 1;
+      order: 1;
+    }
+
+    .timeline-center {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 10px;
+      gap: 8px;
+    }
+
+    .timeline-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: .85rem;
+      color: #fff;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+
+    .timeline-phase {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      text-align: center;
+    }
+
+    .tl-title {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .tl-duration {
+      font-size: .78rem;
+      color: #a5b4fc;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tl-topics {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tl-topic {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .83rem;
+      color: var(--text-muted);
+    }
+
+    .tl-topic::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--secondary);
+      flex-shrink: 0;
+    }
+
+    /* ── PRICING ── */
+    #pricing {
+      background: var(--dark3);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 50px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      transition: all .3s;
+    }
+
+    .pricing-card.featured {
+      border-color: rgba(99, 102, 241, .5);
+      background: linear-gradient(135deg, rgba(99, 102, 241, .12), rgba(6, 182, 212, .06));
+    }
+
+    .pricing-card.featured::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 20%;
+      right: 20%;
+      height: 3px;
+      background: var(--gradient);
+      border-radius: 99px;
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--gradient2);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+
+    .pricing-plan {
+      font-size: .8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .pricing-amount {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pricing-original {
+      font-size: .9rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+      margin-left: 8px;
+    }
+
+    .pricing-emi {
+      font-size: .82rem;
+      color: #86efac;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .pricing-divider {
+      height: 1px;
+      background: var(--glass-border);
+      margin: 24px 0;
+    }
+
+    .pricing-features {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .pricing-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .88rem;
+    }
+
+    .pricing-feature i {
+      color: #86efac;
+      font-size: .85rem;
+      width: 16px;
+    }
+
+    .pricing-feature.cross i {
+      color: #f87171;
+    }
+
+    .pricing-feature.cross span {
+      color: var(--text-muted);
+    }
+
+    .offer-banner {
+      background: linear-gradient(135deg, rgba(245, 158, 11, .15), rgba(239, 68, 68, .1));
+      border: 1px solid rgba(245, 158, 11, .3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+
+    .offer-text {
+      font-size: .85rem;
+    }
+
+    .offer-text strong {
+      color: #fcd34d;
+    }
+
+    /* ── FAQ ── */
+    #faq {
+      background: var(--dark2);
+    }
+
+    .faq-list {
+      max-width: 750px;
+      margin: 50px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color .3s;
+    }
+
+    .faq-item.open {
+      border-color: rgba(99, 102, 241, .4);
+    }
+
+    .faq-q {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .95rem;
+      gap: 12px;
+    }
+
+    .faq-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(99, 102, 241, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a5b4fc;
+      flex-shrink: 0;
+      transition: transform .3s, background .3s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: rgba(99, 102, 241, .3);
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s;
+      padding: 0 24px;
+    }
+
+    .faq-a p {
+      color: var(--text-muted);
+      font-size: .9rem;
+      line-height: 1.7;
+      padding-bottom: 20px;
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 200px;
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--dark3);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, .15);
+      border: 1px solid rgba(99, 102, 241, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a5b4fc;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: .78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 600;
+    }
+
+    .contact-value {
+      font-size: .95rem;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .contact-form {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 36px;
+    }
+
+    .form-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(0, 0, 0, .3);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      color: #fff;
+      font-size: .9rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: rgba(99, 102, 241, .6);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(148, 163, 184, .4);
+    }
+
+    select option {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      border-radius: 99px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .25s;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(99, 102, 241, .5);
+    }
+
+    .form-note {
+      font-size: .75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #08070f;
+      border-top: 1px solid var(--glass-border);
+      padding: 60px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .footer-desc {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 20px;
+      max-width: 280px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all .25s;
+      font-size: .9rem;
+    }
+
+    .social-link:hover {
+      background: var(--gradient);
+      border-color: transparent;
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .footer-col-title {
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--glass-border);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-tagline {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-tagline span {
+      color: #f87171;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 500;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 6px 30px rgba(37, 211, 102, .4);
+      animation: bounce-in .6s ease;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 40px rgba(37, 211, 102, .5);
+    }
+
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0)
+      }
+
+      70% {
+        transform: scale(1.15)
+      }
+
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    .wa-tooltip {
+      position: absolute;
+      right: 62px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #111;
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+
+    .wa-float:hover .wa-tooltip {
+      opacity: 1;
+    }
+
+    /* ── SCROLL ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ── MOBILE NAV ── */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 990;
+      background: rgba(10, 9, 18, .97);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      transform: translateX(100%);
+      transition: transform .4s ease;
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .mobile-menu a {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .mobile-menu-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .timeline::before {
+        display: none;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-center {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: 12px;
+      }
+
+      .timeline-empty {
+        display: none;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content {
+        grid-column: 1;
+        order: unset;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-card-wrap {
+        max-width: 340px;
+      }
+
+      .float-badge.fb1 {
+        top: -12px;
+        right: -8px;
+      }
+
+      .float-badge.fb2 {
+        bottom: -12px;
+        left: -8px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-lg {
+        padding: 12px 22px;
+        font-size: .9rem;
+      }
+    }
+
+    /* ── SCROLL PROGRESS BAR ── */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      z-index: 9998;
+      background: var(--gradient);
+      width: 0%;
+      transition: width .1s linear;
+    }
+
+    /* ── ANNOUNCEMENT BAR ── */
+    #announce-bar {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4, #f59e0b, #4f46e5);
+      background-size: 300% 100%;
+      animation: gradShift 6s ease infinite;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: #fff;
+      position: relative;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @keyframes gradShift {
+
+      0%,
+      100% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+    }
+
+    #announce-bar .countdown {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .cd-box {
+      background: rgba(0, 0, 0, .25);
+      border-radius: 6px;
+      padding: 2px 8px;
+      font-family: 'Syne', sans-serif;
+      font-size: .9rem;
+      font-weight: 800;
+      min-width: 32px;
+      text-align: center;
+    }
+
+    .cd-sep {
+      font-weight: 800;
+      opacity: .7;
+    }
+
+    #announce-close {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1rem;
+      opacity: .7;
+      transition: opacity .2s;
+    }
+
+    #announce-close:hover {
+      opacity: 1;
+    }
+
+    /* ── BACK TO TOP ── */
+    #back-top {
+      position: fixed;
+      bottom: 92px;
+      right: 28px;
+      z-index: 500;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .3s ease;
+      font-size: .85rem;
+      backdrop-filter: blur(12px);
+    }
+
+    #back-top.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #back-top:hover {
+      background: var(--gradient);
+      border-color: transparent;
+      transform: translateY(-3px);
+    }
+
+    /* ── TOAST ── */
+    #toast-wrap {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      z-index: 9000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast {
+      background: rgba(15, 14, 23, .95);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(20px);
+      border-radius: 12px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 280px;
+      max-width: 340px;
+      transform: translateX(110%);
+      transition: transform .4s cubic-bezier(.34, 1.56, .64, 1);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+    }
+
+    .toast.show {
+      transform: translateX(0);
+    }
+
+    .toast-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .85rem;
+      flex-shrink: 0;
+    }
+
+    .toast-icon.success {
+      background: rgba(34, 197, 94, .2);
+      color: #86efac;
+    }
+
+    .toast-icon.info {
+      background: rgba(99, 102, 241, .2);
+      color: #a5b4fc;
+    }
+
+    .toast-icon.warning {
+      background: rgba(245, 158, 11, .2);
+      color: #fcd34d;
+    }
+
+    .toast-body .toast-title {
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .toast-body .toast-msg {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── BROCHURE MODAL ── */
+    #brochure-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 8000;
+      background: rgba(0, 0, 0, .7);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      padding: 20px;
+    }
+
+    #brochure-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: var(--dark2);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 460px;
+      width: 100%;
+      transform: scale(.92) translateY(20px);
+      transition: transform .3s cubic-bezier(.34, 1.56, .64, 1);
+      position: relative;
+    }
+
+    #brochure-modal.open .modal-box {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .9rem;
+      transition: background .2s;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, .12);
+    }
+
+    .modal-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .modal-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .modal-sub {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .modal-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .modal-perk {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+    }
+
+    .modal-perk i {
+      color: #86efac;
+      font-size: .8rem;
+    }
+
+    /* ── EXIT INTENT POPUP ── */
+    #exit-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 8500;
+      background: rgba(0, 0, 0, .75);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s;
+      padding: 20px;
+    }
+
+    #exit-popup.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .popup-box {
+      background: var(--dark2);
+      border: 1px solid rgba(99, 102, 241, .4);
+      border-radius: 28px;
+      max-width: 500px;
+      width: 100%;
+      overflow: hidden;
+      transform: scale(.9);
+      transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+      position: relative;
+    }
+
+    #exit-popup.open .popup-box {
+      transform: scale(1);
+    }
+
+    .popup-top {
+      background: var(--gradient);
+      padding: 30px 32px 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .popup-emoji {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .popup-top h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .popup-top p {
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .85);
+      margin-top: 6px;
+    }
+
+    .popup-body {
+      padding: 28px 32px;
+    }
+
+    .popup-offer {
+      background: rgba(245, 158, 11, .1);
+      border: 1px solid rgba(245, 158, 11, .3);
+      border-radius: 12px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: .88rem;
+    }
+
+    .popup-offer strong {
+      color: #fcd34d;
+    }
+
+    .popup-close-x {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, .2);
+      border: none;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: .85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .popup-dismiss {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: .8rem;
+      cursor: pointer;
+      margin-top: 12px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .popup-dismiss:hover {
+      color: #fff;
+    }
+
+    /* ── STATS COUNTER ── */
+    .stat-num[data-target] {
+      transition: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-logo">Amrutha Next Gen Solutions</div>
+    <div class="loader-bar">
+      <div class="loader-fill"></div>
+    </div>
+    <div style="font-size:.78rem;color:#475569;font-weight:600;letter-spacing:.1em;text-transform:uppercase">Loading
+      Academy...</div>
+  </div>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/918247014778?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Mainframe%20%26%20AI%20Training"
+    class="wa-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announce-bar">
+    <div class="countdown">
+      <span>Next Batch Starts in:</span>
+      <div class="cd-box">04</div><span class="cd-sep">:</span>
+      <div class="cd-box">12</div><span class="cd-sep">:</span>
+      <div class="cd-box">45</div>
+    </div>
+    <span>• Early Bird Discount Ends in 48 Hours!</span>
+    <button id="announce-close" onclick="this.parentElement.style.display='none'">&times;</button>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <div id="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="closeMobileMenu()"><i class="fas fa-times"></i></button>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#courses" onclick="closeMobileMenu()">Courses</a>
+    <a href="#features" onclick="closeMobileMenu()">Features</a>
+    <a href="#placement" onclick="closeMobileMenu()">Placement</a>
+    <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+    <a href="https://forms.gle/t36PxGq5qdBrsuec6" target="_blank"
+      style="background:var(--gradient);padding:12px 28px;border-radius:99px">Apply Now</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">ANG</div>
+        <div class="nav-logo-text">Amrutha <span>Next Gen Solutions</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#placement">Placement</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-outline">Contact</a>
+        <a href="#contact" class="btn btn-primary">Sign Up <i class="fas fa-user-plus"></i></a>
+      </div>
+      <div class="hamburger" onclick="openMobileMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ACTION CONNECT TICKER -->
+  <section id="action-connect"
+    style="border-bottom: 1px solid var(--glass-border); border-top: none; padding: 100px 0 25px 0;">
+    <div class="action-ticker-wrap">
+      <div class="action-ticker">
+        <!-- Group 1 -->
+        <a href="https://forms.gle/YRYVUWGuwpYGMYw19" target="_blank" class="action-ticker-btn atb-signup"><i
+            class="fas fa-user-plus"></i> Sign Up Now</a>
+        <a href="tel:918247014778" class="action-ticker-btn"><i class="fas fa-phone"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        <a href="#contact" class="action-ticker-btn"><i class="fas fa-phone"></i> Contact Support</a>
+        <a href="https://wa.me/918247014778?text=Hi%2C%20I%20want%20to%20attend%20a%20FREE%20demo%20class"
+          target="_blank" class="action-ticker-btn"><i class="fas fa-calendar-check"></i> Book Demo</a>
+
+        <!-- Group 2 -->
+        <a href="https://forms.gle/YRYVUWGuwpYGMYw19" target="_blank" class="action-ticker-btn atb-signup"><i
+            class="fas fa-user-plus"></i> Sign Up Now</a>
+        <a href="tel:918247014778" class="action-ticker-btn"><i class="fas fa-phone"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        <a href="#contact" class="action-ticker-btn"><i class="fas fa-phone"></i> Contact Support</a>
+        <a href="https://wa.me/918247014778?text=Hi%2C%20I%20want%20to%20attend%20a%20FREE%20demo%20class"
+          target="_blank" class="action-ticker-btn"><i class="fas fa-calendar-check"></i> Book Demo</a>
+
+        <!-- Duplicate for Infinite Loop -->
+        <a href="https://forms.gle/YRYVUWGuwpYGMYw19" target="_blank" class="action-ticker-btn atb-signup"><i
+            class="fas fa-user-plus"></i> Sign Up Now</a>
+        <a href="tel:918247014778" class="action-ticker-btn"><i class="fas fa-phone"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> 8247014778</a>
+        <a href="https://wa.me/918247014778" target="_blank" class="action-ticker-btn atb-whatsapp"><i
+            class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        <a href="#contact" class="action-ticker-btn"><i class="fas fa-phone"></i> Contact Support</a>
+        <a href="https://wa.me/918247014778?text=Hi%2C%20I%20want%20to%20attend%20a%20FREE%20demo%20class"
+          target="_blank" class="action-ticker-btn"><i class="fas fa-calendar-check"></i> Book Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-inner container" style="max-width:1200px;margin:0 auto;padding:80px 24px;">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="dot"></span>
+          #1 Mainframe & AI Training in India
+        </div>
+        <h1 class="hero-title reveal">
+          Launch Your Career in<br><span class="grad">IBM Mainframe & AI</span>
+        </h1>
+        <p class="hero-sub reveal">Industry-ready training with <strong style="color:#fff">100% Placement
+            Assistance.</strong> Master COBOL, JCL, DB2, CICS & Artificial Intelligence — skills that Fortune 500
+          companies can't do without.</p>
+        <div class="hero-btns reveal">
+          <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-rocket"></i> Sign Up Now</a>
+          <a href="#demo-area" class="btn btn-outline btn-lg"><i class="fas fa-calendar-check"></i> Book Demo Class</a>
+          <a href="#" class="btn btn-outline btn-lg" onclick="downloadBrochure(event)"><i class="fas fa-download"></i>
+            Brochure</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <div class="stat-num" data-target="2500" data-suffix="+">0</div>
+            <div class="stat-label">Students Placed</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="98" data-suffix="%">0</div>
+            <div class="stat-label">Placement Rate</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="150" data-suffix="+">0</div>
+            <div class="stat-label">Hiring Partners</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="8" data-prefix="₹" data-suffix="L">0</div>
+            <div class="stat-label">Avg. Package</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right">
+        <div class="hero-card-wrap">
+          <div class="float-badge fb1">
+            <div class="fb-icon"
+              style="background:linear-gradient(135deg,rgba(34,197,94,.3),rgba(34,197,94,.1));color:#86efac"><i
+                class="fas fa-check-circle"></i></div>
+            <div class="fb-text">
+              <div class="fb-title">Placement Achieved!</div>
+              <div class="fb-sub">₹10.5 LPA at Infosys</div>
+            </div>
+          </div>
+          <div class="hero-main-card">
+            <div class="terminal">
+              <div class="terminal-bar">
+                <div class="terminal-dot t-red"></div>
+                <div class="terminal-dot t-yellow"></div>
+                <div class="terminal-dot t-green"></div>
+              </div>
+              <div class="t-line"><span class="t-cmd">$ </span><span class="t-out">cobol --run payroll.cbl</span></div>
+              <div class="t-line"><span class="t-highlight">✓ Program compiled successfully</span></div>
+              <div class="t-line"><span class="t-cmd">$ </span><span class="t-out">db2 connect to BANKDB</span></div>
+              <div class="t-line"><span class="t-highlight">✓ Database connection established</span></div>
+              <div class="t-line"><span class="t-cmd">$ </span><span class="t-out">python ai_model.py --train</span>
+              </div>
+              <div class="t-line" style="color:#c084fc">→ Epoch 10/10 — Accuracy: 97.4%</div>
+              <div class="t-line"><span class="t-cmd">$ </span><span class="t-out">career status</span></div>
+              <div class="t-line" style="color:#86efac;font-weight:700">🚀 PLACED @ ₹9.6 LPA</div>
+            </div>
+          </div>
+          <div class="float-badge fb2">
+            <div class="fb-icon"
+              style="background:linear-gradient(135deg,rgba(245,158,11,.3),rgba(245,158,11,.1));color:#fcd34d"><i
+                class="fas fa-star"></i></div>
+            <div class="fb-text">
+              <div class="fb-title">Batch Filling Fast</div>
+              <div class="fb-sub">Only 12 seats left</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal-left">
+          <div class="section-tag"><i class="fas fa-info-circle"></i> About Program</div>
+          <h2 class="section-title">Why IBM Mainframe<br>+ <span class="grad">AI is the Future</span></h2>
+          <p style="color:var(--text-muted);line-height:1.7;margin-bottom:24px">IBM Mainframe systems process <strong
+              style="color:#fff">over 30 billion transactions daily</strong> — powering global banking, insurance, and
+            enterprise IT. Combined with modern AI, professionals with this dual skill set command premium salaries and
+            lifetime job security.</p>
+          <div class="about-points">
+            <div class="about-point">
+              <div class="point-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <div class="point-title">Banking & Finance Demand</div>
+                <div class="point-desc">71% of Fortune 500 banks rely on IBM Z-Series mainframes for core operations —
+                  creating thousands of job openings every year.</div>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="point-icon"><i class="fas fa-brain"></i></div>
+              <div>
+                <div class="point-title">AI Integration Skills</div>
+                <div class="point-desc">Mainframe + AI professionals are the rarest talent — enterprises actively
+                  recruit for hybrid skill profiles at 2x the salary.</div>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="point-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <div class="point-title">Recession-Proof Career</div>
+                <div class="point-desc">Mainframe skills face a talent shortage as older experts retire — creating
+                  massive demand for new trained professionals.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="section-tag" style="margin-bottom:16px"><i class="fas fa-building"></i> Industries Using Mainframe
+          </div>
+          <div class="industry-chips">
+            <span class="chip chip-blue"><i class="fas fa-university"></i> &nbsp;Banking</span>
+            <span class="chip chip-cyan"><i class="fas fa-heartbeat"></i> &nbsp;Healthcare</span>
+            <span class="chip chip-yellow"><i class="fas fa-plane"></i> &nbsp;Airlines</span>
+            <span class="chip chip-green"><i class="fas fa-shopping-cart"></i> &nbsp;Retail</span>
+            <span class="chip chip-blue"><i class="fas fa-shield-alt"></i> &nbsp;Insurance</span>
+            <span class="chip chip-cyan"><i class="fas fa-globe"></i> &nbsp;Telecom</span>
+            <span class="chip chip-yellow"><i class="fas fa-coins"></i> &nbsp;Finance</span>
+            <span class="chip chip-green"><i class="fas fa-server"></i> &nbsp;Government IT</span>
+          </div>
+          <div class="demand-stat">
+            <div class="demand-num">₹3.5L Cr</div>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-top:4px">Annual transaction value processed by
+              Mainframes in India's banking sector</div>
+            <div style="margin-top:12px;display:flex;align-items:center;gap:8px;font-size:.82rem;color:#86efac"><i
+                class="fas fa-arrow-trend-up"></i> 40,000+ Mainframe jobs open in India right now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-book-open"></i> Courses Offered</div>
+        <h2 class="section-title">Master the <span class="grad">Right Skills</span></h2>
+        <p class="section-sub">Comprehensive training modules designed by IBM-certified experts and industry veterans
+          with 15+ years of experience.</p>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card reveal">
+          <div class="course-icon ci-blue"><i class="fas fa-server" style="color:#a5b4fc"></i></div>
+          <div class="course-title">IBM Mainframe Fundamentals</div>
+          <div class="course-desc">Complete foundation in IBM Z/OS architecture, JCL job scripting, VSAM datasets, and
+            TSO/ISPF environment.</div>
+          <div class="course-tags"><span class="tag">z/OS</span><span class="tag">JCL</span><span
+              class="tag">VSAM</span><span class="tag">TSO/ISPF</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#a5b4fc"></i> 4–6 weeks • Beginner to
+            Intermediate</div>
+        </div>
+        <div class="course-card reveal" style="transition-delay:.1s">
+          <div class="course-icon ci-cyan"><i class="fas fa-code" style="color:#67e8f9"></i></div>
+          <div class="course-title">COBOL & DB2 Programming</div>
+          <div class="course-desc">Master enterprise COBOL programming, embedded SQL with IBM DB2, batch processing, and
+            file handling for banking systems.</div>
+          <div class="course-tags"><span class="tag">COBOL</span><span class="tag">DB2</span><span
+              class="tag">SQL</span><span class="tag">Batch Processing</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#67e8f9"></i> 6–8 weeks • Intermediate</div>
+        </div>
+        <div class="course-card reveal" style="transition-delay:.2s">
+          <div class="course-icon ci-yellow"><i class="fas fa-exchange-alt" style="color:#fcd34d"></i></div>
+          <div class="course-title">CICS Online Programming</div>
+          <div class="course-desc">Build real-time online transaction systems using CICS — the backbone of ATM networks,
+            banking portals, and enterprise apps.</div>
+          <div class="course-tags"><span class="tag">CICS</span><span class="tag">BMS</span><span
+              class="tag">Transactions</span><span class="tag">Online Apps</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#fcd34d"></i> 4 weeks • Intermediate</div>
+        </div>
+        <div class="course-card reveal" style="transition-delay:.3s">
+          <div class="course-icon ci-green"><i class="fas fa-robot" style="color:#86efac"></i></div>
+          <div class="course-title">AI & Machine Learning</div>
+          <div class="course-desc">Python for data science, supervised/unsupervised learning, neural networks, NLP
+            basics, and integration with enterprise systems.</div>
+          <div class="course-tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span
+              class="tag">NLP</span><span class="tag">Deep Learning</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#86efac"></i> 8 weeks • Beginner to Advanced
+          </div>
+        </div>
+        <div class="course-card reveal" style="transition-delay:.1s">
+          <div class="course-icon ci-blue"><i class="fas fa-project-diagram" style="color:#a5b4fc"></i></div>
+          <div class="course-title">Real-Time Project Training</div>
+          <div class="course-desc">Work on live banking and insurance simulation projects — process payrolls, build CICS
+            apps, and create AI-powered analytics dashboards.</div>
+          <div class="course-tags"><span class="tag">Capstone</span><span class="tag">Banking Sim</span><span
+              class="tag">Portfolio</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#a5b4fc"></i> 4 weeks • All Levels</div>
+        </div>
+        <div class="course-card reveal" style="transition-delay:.2s">
+          <div class="course-icon ci-cyan"><i class="fas fa-user-tie" style="color:#67e8f9"></i></div>
+          <div class="course-title">Soft Skills & Interview Prep</div>
+          <div class="course-desc">Communication, resume building, LinkedIn optimization, mock interviews with HR
+            professionals, and negotiation strategies.</div>
+          <div class="course-tags"><span class="tag">Resume</span><span class="tag">Mock Interviews</span><span
+              class="tag">LinkedIn</span></div>
+          <div class="course-duration"><i class="fas fa-clock" style="color:#67e8f9"></i> 2 weeks • All Levels</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-star"></i> Why Choose Us</div>
+        <h2 class="section-title">Everything You Need to<br><span class="grad">Get Placed</span></h2>
+        <p class="section-sub">We don't just teach — we transform freshers and professionals into industry-ready talents
+          who companies fight to hire.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="feature-title">100% Placement Assistance</div>
+          <div class="feature-desc">Dedicated placement cell with 150+ hiring partners ensuring every student gets job
+            opportunities until placed.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.08s">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#06b6d4,#0ea5e9)"><i
+              class="fas fa-laptop-code"></i></div>
+          <div class="feature-title">Live Projects on Mainframe</div>
+          <div class="feature-desc">Hands-on training with real IBM Mainframe environment — not just theory, but actual
+            banking transaction processing.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.16s">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#f59e0b,#f97316)"><i
+              class="fas fa-chalkboard-teacher"></i></div>
+          <div class="feature-title">Industry Expert Mentors</div>
+          <div class="feature-desc">Learn from IBM-certified professionals with 15–20 years in TCS, Infosys, Wipro, and
+            top banking IT teams.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.24s">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><i
+              class="fas fa-file-alt"></i></div>
+          <div class="feature-title">Resume & LinkedIn Support</div>
+          <div class="feature-desc">ATS-optimized resume creation, LinkedIn profile building, and personal branding
+            guidance by placement experts.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.32s">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)"><i
+              class="fas fa-certificate"></i></div>
+          <div class="feature-title">Industry Certification</div>
+          <div class="feature-desc">Receive an Amrutha Next Gen Solutions completion certificate recognized by 150+
+            partner
+            companies during hiring.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.4s">
+          <div class="feature-icon" style="background:linear-gradient(135deg,#ef4444,#dc2626)"><i
+              class="fas fa-headset"></i></div>
+          <div class="feature-title">Lifetime Support</div>
+          <div class="feature-desc">Access recorded sessions, doubt clearing sessions, alumni network, and placement
+            support even after course completion.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLACEMENT -->
+  <section id="placement">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-trophy"></i> Placement Record</div>
+        <h2 class="section-title">Our Students Work at<br><span class="grad">Top Companies</span></h2>
+        <p class="section-sub">2,500+ students placed across banking IT, MNCs, and enterprise software companies across
+          India and abroad.</p>
+      </div>
+      <div class="placement-inner">
+        <div class="companies-label reveal">TRUSTED HIRING PARTNERS</div>
+        <div class="companies-track-wrap reveal">
+          <div class="companies-track" id="companiesTrack">
+            <div class="company-logo"><i class="fas fa-building" style="color:#a5b4fc"></i> TCS</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#67e8f9"></i> Infosys</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#fcd34d"></i> Wipro</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#86efac"></i> HCL Tech</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#a5b4fc"></i> SBI</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#67e8f9"></i> HDFC Bank</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#fcd34d"></i> ICICI Bank</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#86efac"></i> Cognizant</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#a5b4fc"></i> Capgemini</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#67e8f9"></i> IBM India</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#fcd34d"></i> Accenture</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#86efac"></i> Axis Bank</div>
+            <!-- duplicate for infinite scroll -->
+            <div class="company-logo"><i class="fas fa-building" style="color:#a5b4fc"></i> TCS</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#67e8f9"></i> Infosys</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#fcd34d"></i> Wipro</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#86efac"></i> HCL Tech</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#a5b4fc"></i> SBI</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#67e8f9"></i> HDFC Bank</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#fcd34d"></i> ICICI Bank</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#86efac"></i> Cognizant</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#a5b4fc"></i> Capgemini</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#67e8f9"></i> IBM India</div>
+            <div class="company-logo"><i class="fas fa-building" style="color:#fcd34d"></i> Accenture</div>
+            <div class="company-logo"><i class="fas fa-university" style="color:#86efac"></i> Axis Bank</div>
+          </div>
+        </div>
+        <div class="salary-cards">
+          <div class="salary-card reveal">
+            <div class="salary-role">Junior Mainframe Developer</div>
+            <div class="salary-amount">₹4–7 LPA</div>
+            <div class="salary-range">Fresher | 0–1 Year Experience</div>
+          </div>
+          <div class="salary-card reveal" style="transition-delay:.1s">
+            <div class="salary-role">Mainframe Analyst / COBOL Dev</div>
+            <div class="salary-amount">₹7–12 LPA</div>
+            <div class="salary-range">1–3 Years Experience</div>
+          </div>
+          <div class="salary-card reveal" style="transition-delay:.2s">
+            <div class="salary-role">Senior Mainframe Engineer</div>
+            <div class="salary-amount">₹12–20 LPA</div>
+            <div class="salary-range">3–6 Years Experience</div>
+          </div>
+          <div class="salary-card reveal" style="transition-delay:.3s">
+            <div class="salary-role">Mainframe + AI Specialist</div>
+            <div class="salary-amount">₹18–35 LPA</div>
+            <div class="salary-range">5+ Years | Dual-Skill Profile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-quote-left"></i> Success Stories</div>
+        <h2 class="section-title">Students Who<br><span class="grad">Changed Their Lives</span></h2>
+        <p class="section-sub">Real stories from real students who trusted Amrutha Next Gen Solutions and transformed
+          their
+          careers.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I was a B.Sc IT fresher with no job. After 5 months of Mainframe training here, I got
+            placed at TCS for ₹6.5 LPA. The mentors are incredibly patient and the real-project exposure is unmatched
+            anywhere."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">PK</div>
+            <div>
+              <div class="testi-name">Priya Krishnan</div>
+              <div class="testi-role">Mainframe Developer @ TCS, Chennai</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.1s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"I had 2 years of IT experience but was stuck in a low-paying job. The Mainframe + AI
+            dual certification helped me jump from ₹4L to ₹11 LPA at HDFC Bank's IT division. Game-changing!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#06b6d4,#0ea5e9)">AR</div>
+            <div>
+              <div class="testi-name">Arjun Reddy</div>
+              <div class="testi-role">Senior Analyst @ HDFC Bank IT, Hyderabad</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.2s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The placement team is extraordinary — they arranged 8 interviews for me! The CICS and
+            DB2 modules are extremely in-depth. Secured my dream role at Capgemini within 3 weeks of completing the
+            course."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#f59e0b,#f97316)">SM</div>
+            <div>
+              <div class="testi-name">Sneha Mehta</div>
+              <div class="testi-role">COBOL Developer @ Capgemini, Pune</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Coming from a non-IT background was scary, but the trainers made every concept crystal
+            clear. Got placed at SBI's IT dept at ₹7.2 LPA. Never imagined I'd work on mainframes processing crore-rupee
+            transactions!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#10b981,#059669)">RV</div>
+            <div>
+              <div class="testi-name">Rahul Verma</div>
+              <div class="testi-role">Mainframe Ops @ SBI IT, Mumbai</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.1s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The AI modules integrated beautifully with the Mainframe curriculum. I now work on
+            building ML models that run analytics on banking transaction data. ₹14 LPA at Infosys — couldn't be
+            happier!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">DG</div>
+            <div>
+              <div class="testi-name">Divya Gupta</div>
+              <div class="testi-role">AI + Mainframe Specialist @ Infosys, Bangalore</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="transition-delay:.2s">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The batch was small and personalized. Every doubt was answered. The mock interview
+            sessions were so realistic that actual interviews felt easy. Got IBM India offer in the first interview
+            itself!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:linear-gradient(135deg,#ef4444,#dc2626)">KN</div>
+            <div>
+              <div class="testi-name">Karthik Nair</div>
+              <div class="testi-role">Systems Engineer @ IBM India, Bangalore</div>
+              <div class="testi-badge"><i class="fas fa-check"></i> Verified Alumni</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section id="curriculum">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-road"></i> Learning Roadmap</div>
+        <h2 class="section-title">Your <span class="grad">6-Month Journey</span><br>to a Dream Job</h2>
+        <p class="section-sub">A structured, phase-wise curriculum designed to take you from zero to placement-ready in
+          6 months.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content reveal-left">
+            <div class="tl-duration"><i class="fas fa-calendar"></i> Month 1–2 • Foundation Phase</div>
+            <div class="tl-title">Mainframe Fundamentals + COBOL Basics</div>
+            <div class="tl-topics">
+              <div class="tl-topic">IBM z/OS Architecture Overview</div>
+              <div class="tl-topic">TSO/ISPF Navigation & Dataset Management</div>
+              <div class="tl-topic">JCL — Job Control Language from scratch</div>
+              <div class="tl-topic">COBOL Syntax, Divisions, and Data Types</div>
+              <div class="tl-topic">File Handling — Sequential & VSAM</div>
+            </div>
+          </div>
+          <div class="timeline-center">
+            <div class="timeline-dot">01</div>
+            <div class="timeline-phase">Foundation</div>
+          </div>
+          <div class="timeline-empty"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-center">
+            <div class="timeline-dot">02</div>
+            <div class="timeline-phase">Core Skills</div>
+          </div>
+          <div class="timeline-content reveal-right">
+            <div class="tl-duration"><i class="fas fa-calendar"></i> Month 3 • Core Development</div>
+            <div class="tl-title">Advanced COBOL + DB2 + CICS</div>
+            <div class="tl-topics">
+              <div class="tl-topic">Advanced COBOL — Arrays, Tables, Sorting</div>
+              <div class="tl-topic">IBM DB2 — Embedded SQL, Stored Procedures</div>
+              <div class="tl-topic">CICS — Transaction Processing & BMS Screens</div>
+              <div class="tl-topic">MQ Series — Message Queue Basics</div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content reveal-left">
+            <div class="tl-duration"><i class="fas fa-calendar"></i> Month 4 • AI & Python</div>
+            <div class="tl-title">Python for AI & Machine Learning</div>
+            <div class="tl-topics">
+              <div class="tl-topic">Python, NumPy, Pandas, Matplotlib</div>
+              <div class="tl-topic">Machine Learning — Classification & Regression</div>
+              <div class="tl-topic">NLP Basics & Text Analytics</div>
+              <div class="tl-topic">AI Integration with Enterprise Systems</div>
+            </div>
+          </div>
+          <div class="timeline-center">
+            <div class="timeline-dot">03</div>
+            <div class="timeline-phase">AI Skills</div>
+          </div>
+          <div class="timeline-empty"></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-empty"></div>
+          <div class="timeline-center">
+            <div class="timeline-dot">04</div>
+            <div class="timeline-phase">Projects</div>
+          </div>
+          <div class="timeline-content reveal-right">
+            <div class="tl-duration"><i class="fas fa-calendar"></i> Month 5 • Real-World Projects</div>
+            <div class="tl-title">Capstone Projects & Portfolio Building</div>
+            <div class="tl-topics">
+              <div class="tl-topic">Banking Payroll System in COBOL + DB2</div>
+              <div class="tl-topic">CICS Online Customer Portal</div>
+              <div class="tl-topic">AI-Powered Transaction Anomaly Detection</div>
+              <div class="tl-topic">GitHub Portfolio & Project Documentation</div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content reveal-left">
+            <div class="tl-duration"><i class="fas fa-calendar"></i> Month 6 • Placement Sprint</div>
+            <div class="tl-title">Interview Prep & Placement Drive</div>
+            <div class="tl-topics">
+              <div class="tl-topic">15+ Mock Technical Interviews</div>
+              <div class="tl-topic">HR Rounds & Behavioral Prep</div>
+              <div class="tl-topic">Resume, LinkedIn & Personal Branding</div>
+              <div class="tl-topic">Campus Drives & Off-Campus Referrals</div>
+            </div>
+          </div>
+          <div class="timeline-center">
+            <div class="timeline-dot"><i class="fas fa-trophy" style="font-size:.7rem"></i></div>
+            <div class="timeline-phase">Placed!</div>
+          </div>
+          <div class="timeline-empty"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMISSION PROCESS -->
+  <section id="process" style="background:var(--dark3)">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-user-check"></i> Admission Process</div>
+        <h2 class="section-title">How to <span class="grad">Join ANG Academy</span></h2>
+        <p class="section-sub">Simple 4-step process to launch your world-class career in Mainframe & AI.</p>
+      </div>
+      <div class="features-grid" style="margin-top:60px">
+        <div class="feature-card reveal">
+          <div class="feature-icon" style="background:var(--gradient)">1</div>
+          <div class="feature-title">Online Application</div>
+          <div class="feature-desc">Fill out the official Google Form with your academic and contact details. It takes
+            less than 2 minutes.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.1s">
+          <div class="feature-icon" style="background:var(--gradient)">2</div>
+          <div class="feature-title">Free Counseling</div>
+          <div class="feature-desc">Our expert counselors will call you to discuss your career goals and suggest the
+            best course path.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.2s">
+          <div class="feature-icon" style="background:var(--gradient)">3</div>
+          <div class="feature-title">Demo & Enrollment</div>
+          <div class="feature-desc">Attend a free demo class, verify our infrastructure, and finalize your seat with
+            easy EMI options.</div>
+        </div>
+        <div class="feature-card reveal" style="transition-delay:.3s">
+          <div class="feature-icon" style="background:var(--gradient)">4</div>
+          <div class="feature-title">Batch Kickoff</div>
+          <div class="feature-desc">Get access to the student portal, live server environments, and start your journey
+            to a high-paying job.</div>
+        </div>
+      </div>
+      <div class="text-center reveal" style="margin-top:50px">
+        <a href="https://forms.gle/t36PxGq5qdBrsuec6" target="_blank" class="btn btn-primary btn-lg"><i
+            class="fab fa-google"></i> Start Step 1 Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-tag"></i> Pricing</div>
+        <h2 class="section-title">Invest in Your<br><span class="grad">Dream Career</span></h2>
+        <p class="section-sub">Transparent pricing with zero hidden fees. EMI options available to make quality
+          education accessible to everyone.</p>
+      </div>
+      <div class="offer-banner reveal" style="max-width:700px;margin:30px auto 0">
+        <i class="fas fa-fire" style="color:#f59e0b;font-size:1.2rem"></i>
+        <div class="offer-text"><strong>Limited Time Offer:</strong> Enroll before March 31st and get ₹10,000 off + FREE
+          Laptop for top performers. <strong>Only 8 seats left!</strong></div>
+      </div>
+      <div class="pricing-grid" style="margin-top:40px">
+        <div class="pricing-card reveal">
+          <div class="pricing-plan">Mainframe Only</div>
+          <div>
+            <span class="pricing-amount">₹25,000</span>
+            <span class="pricing-original">₹35,000</span>
+          </div>
+          <div class="pricing-emi"><i class="fas fa-credit-card"></i> EMI from ₹5,000/month</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>IBM Mainframe Full Course</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>COBOL, JCL, DB2, CICS</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Real Project Training</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Placement Assistance</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Completion Certificate</span></div>
+            <div class="pricing-feature cross"><i class="fas fa-times"></i><span>AI/ML Module</span></div>
+            <div class="pricing-feature cross"><i class="fas fa-times"></i><span>Lifetime Access</span></div>
+          </div>
+          <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+        <div class="pricing-card featured reveal" style="transition-delay:.1s">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-plan">Mainframe + AI Bundle</div>
+          <div>
+            <span class="pricing-amount">₹25,000</span>
+            <span class="pricing-original">₹35,000</span>
+          </div>
+          <div class="pricing-emi"><i class="fas fa-credit-card"></i> EMI from ₹5,500/month | 0% Interest</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Complete Mainframe Mastery</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>AI & Machine Learning Module</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>5 Capstone Projects</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>100% Placement Guarantee</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Lifetime Course Access</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Dual Certification</span></div>
+            <div class="pricing-feature"><i class="fas fa-check"></i><span>Priority Placement Support</span></div>
+          </div>
+          <a href="https://forms.gle/t36PxGq5qdBrsuec6" target="_blank" class="btn btn-primary"
+            style="width:100%;justify-content:center"><i class="fas fa-rocket"></i> Enroll Now — Best Value</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-question-circle"></i> FAQ</div>
+        <h2 class="section-title">Frequently Asked<br><span class="grad">Questions</span></h2>
+        <p class="section-sub">Everything you need to know before joining us.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Who can join this course? Do I need prior IT experience?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>This course is designed for freshers (B.E/B.Tech/B.Sc/BCA graduates), MCA students, and working IT
+              professionals who want to upskill. No prior Mainframe experience is required — we start from absolute zero
+              and take you to an industry-ready level.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.05s">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Is the placement assistance really 100%? How does it work?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Yes! Our placement cell works with 150+ partner companies and conducts regular placement drives. We
+              provide referrals, interview scheduling, and negotiation support. We continue supporting you until you
+              secure a job — not just for the 6-month duration of the course.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.1s">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Is training online, offline, or both?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>We offer both online (live instructor-led via Zoom/Teams) and offline classroom training at our Hyderabad
+              center. All sessions are recorded and available for lifetime access so you can revise anytime.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.15s">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            Will I get access to a real IBM Mainframe environment?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Absolutely. All students get access to our dedicated IBM Mainframe environment (z/OS emulator with
+              Hercules, plus cloud-based IBM Z environment). You'll run real JCL jobs, write COBOL programs, and execute
+              DB2 queries on actual systems.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.2s">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What are the EMI options available?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>We offer 0% interest EMI for 6–12 months through partner NBFCs and banks. For the combo course at
+              ₹55,000, you can pay as low as ₹5,500/month. We also offer an early-bird discount and scholarship for
+              merit students — ask our counselor for details.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:.25s">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            What salary can I expect after completing this course?
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Freshers typically get placed between ₹4–7 LPA, while working professionals with prior IT experience
+              often see packages of ₹8–15 LPA. Our highest placement so far has been ₹22 LPA for a senior Mainframe + AI
+              specialist role at a US-based MNC's India center.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="section-tag"><i class="fas fa-paper-plane"></i> Apply Now</div>
+        <h2 class="section-title">Start Your Journey<br><span class="grad">Today</span></h2>
+        <p class="section-sub">Fill in your details and our counselor will contact you within 24 hours with a
+          personalized roadmap.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:8px">Get in Touch
+            </h3>
+            <p style="color:var(--text-muted);font-size:.9rem;line-height:1.7">Ready to transform your career? Our
+              expert counselors are available Mon–Sat, 9 AM to 7 PM IST.</p>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <div class="contact-label">Phone / WhatsApp</div>
+              <div class="contact-value">+91 82470 14778</div>
+              <div class="contact-value">+91 99631 84989</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">hello@amruthanextgen.com</div>
+              <div class="contact-value">admissions@amruthanextgen.com</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="contact-label">Training Center</div>
+              <div class="contact-value">3rd Floor, Maruthi Avenue, Gokul Plots<br>Hyderabad, Telangana — 500081</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <div class="contact-label">Working Hours</div>
+              <div class="contact-value">Mon – Sat: 9:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+          <div id="demo-area"
+            style="padding:20px;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:14px">
+            <div style="font-weight:700;margin-bottom:8px;font-size:.95rem"><i class="fas fa-gift"
+                style="color:#fcd34d"></i> &nbsp;Free Demo Class</div>
+            <div style="font-size:.85rem;color:var(--text-muted);line-height:1.7">Attend a FREE 2-hour demo session
+              before enrolling. Experience our teaching methodology and ask your questions directly to our trainers.
+            </div>
+            <a href="https://wa.me/918247014778?text=Hi%2C%20I%20want%20to%20attend%20a%20FREE%20demo%20class"
+              target="_blank" class="btn btn-accent" style="margin-top:14px;font-size:.85rem;padding:10px 20px"><i
+                class="fab fa-whatsapp"></i> Book Free Demo via WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-form reveal-right">
+          <div class="form-title">Apply for Admission</div>
+
+          <div
+            style="margin-bottom:24px;background:rgba(99,102,241,.1);border:1px solid rgba(99,102,241,.2);border-radius:12px;padding:16px;text-align:center">
+            <div style="font-size:.85rem;font-weight:600;margin-bottom:10px">Sign Up Faster via Google Forms:</div>
+            <a href="https://forms.gle/t36PxGq5qdBrsuec6" target="_blank" class="btn btn-primary"
+              style="width:100%;justify-content:center"><i class="fab fa-google"></i> Open Google Form</a>
+          </div>
+
+          <form id="applyForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="entry.2005620554" placeholder="Ravi Kumar" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="entry.1166974658" placeholder="+91 82470 14778" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Course Interest *</label>
+              <select name="entry.2059241902" required>
+                <option value="" disabled selected>Select a course</option>
+                <option value="IBM Mainframes">IBM Mainframes (Full Suite)</option>
+                <option value="AI & ML">AI & Machine Learning</option>
+                <option value="Both (Mainframe + AI)">Both (Mainframe + AI) — Best Value</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Current Status</label>
+              <select name="entry.1045781291">
+                <option value="" disabled selected>Select your status</option>
+                <option value="Studying">Currently Studying</option>
+                <option value="Completed">Completed Graduation</option>
+                <option value="Working">Working Professional</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message (Optional)</label>
+              <textarea name="entry.839337160"
+                placeholder="Tell us about your background or any specific questions you have..."></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> &nbsp;Apply Now — It's Free!
+            </button>
+            <div class="form-note"><i class="fas fa-lock"></i> &nbsp;Your details are safe with us. No spam, ever.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROCHURE MODAL -->
+  <div id="brochure-modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('brochure-modal')">&times;</button>
+      <div class="modal-icon"><i class="fas fa-file-pdf"></i></div>
+      <h3 class="modal-title">Download Course Brochure</h3>
+      <p class="modal-sub">Get detailed curriculum, fee structure, and placement records directly to your
+        inbox/WhatsApp.</p>
+      <div class="modal-perks">
+        <div class="modal-perk"><i class="fas fa-check"></i> <span>Complete Learning Roadmap</span></div>
+        <div class="modal-perk"><i class="fas fa-check"></i> <span>Industry Hiring Partners List</span></div>
+        <div class="modal-perk"><i class="fas fa-check"></i> <span>Full Salary Report 2026</span></div>
+      </div>
+      <form onsubmit="handleBrochureSubmit(event)">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label>WhatsApp Number</label>
+          <input type="tel" placeholder="+91 82470 14778" required />
+        </div>
+        <button type="submit" class="form-submit">Get Brochure on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- EXIT POPUP -->
+  <div id="exit-popup">
+    <div class="popup-box">
+      <button class="popup-close-x" onclick="closeModal('exit-popup')">&times;</button>
+      <div class="popup-top">
+        <span class="popup-emoji">🎁</span>
+        <h3>Wait! Don't Miss Out</h3>
+        <p>Enroll in the next 24 hours to get a ₹5,000 scholarship.</p>
+      </div>
+      <div class="popup-body">
+        <div class="popup-offer">
+          Use Code: <strong>ANG_FUTURE_25</strong>
+        </div>
+        <a href="https://forms.gle/t36PxGq5qdBrsuec6" target="_blank" class="btn btn-primary"
+          style="width:100%;justify-content:center">Claim My Scholarship</a>
+        <button class="popup-dismiss" onclick="closeModal('exit-popup')">No thanks, I'll pay full price</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="nav-logo-icon">ANG</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1rem">Amrutha <span
+                style="background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Next
+                Gen
+                Solutions</span></div>
+          </div>
+          <p class="footer-desc">India's premier IBM Mainframe & AI training academy. Empowering 2500+ students with
+            industry-ready skills and guaranteed placements since 2018.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/918247014778" class="social-link"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Courses</div>
+          <div class="footer-links">
+            <a href="#courses">IBM Mainframe</a>
+            <a href="#courses">COBOL Programming</a>
+            <a href="#courses">DB2 & SQL</a>
+            <a href="#courses">CICS Training</a>
+            <a href="#courses">AI & Machine Learning</a>
+            <a href="#courses">Soft Skills</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#testimonials">Success Stories</a>
+            <a href="#placement">Placement Record</a>
+            <a href="#demo-area">Book Demo Class</a>
+            <a href="#curriculum">Curriculum</a>
+            <a href="#pricing">Pricing & EMI</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-links">
+            <a href="tel:+918247014778"><i class="fas fa-phone" style="width:14px"></i> +91 82470 14778</a>
+            <a href="mailto:hello@amruthanextgen.com"><i class="fas fa-envelope" style="width:14px"></i>
+              hello@amruthanextgen.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt" style="width:14px"></i> Madhapur, Hyderabad</a>
+            <a href="#"><i class="fas fa-clock" style="width:14px"></i> Mon–Sat: 9AM–7PM</a>
+          </div>
+          <div style="margin-top:20px">
+            <a href="#contact" class="btn btn-primary" style="font-size:.82rem;padding:10px 18px"><i
+                class="fas fa-rocket"></i> Sign Up Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2026 Amrutha Next Gen Solutions. All rights reserved.</div>
+        <div class="footer-tagline">Precision Training. Guaranteed Future.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // LOADER
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+      }, 2000);
+    });
+
+    // NAVBAR SCROLL
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // MOBILE MENU
+    function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+    function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+    // SCROLL PROGRESS & BACK TO TOP
+    const scrollProgress = document.getElementById('scroll-progress');
+    const backTop = document.getElementById('back-top');
+
+    window.addEventListener('scroll', () => {
+      // Progress
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      scrollProgress.style.width = scrolled + "%";
+
+      // Back to top
+      if (window.scrollY > 500) {
+        backTop.classList.add('show');
+      } else {
+        backTop.classList.remove('show');
+      }
+
+      // Navbar
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // FAQ TOGGLE
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // FORM SUBMIT (CONNECTED TO GOOGLE FORMS)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('applyForm');
+      const btn = document.getElementById('submitBtn');
+      const originalText = btn.innerHTML;
+
+      // Visual feedback
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+      btn.style.opacity = '0.7';
+
+      const formData = new FormData(form);
+      const GOOGLE_FORM_URL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSffrKA_flEiEG9sfagi-MMTquSdrwJQ0Ff2P3xiovw95mYiWw/formResponse';
+
+      fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+        .then(() => {
+          // Successful submission (no-cors always goes to .then)
+          btn.innerHTML = '<i class="fas fa-check-circle"></i> Submission Success!';
+          btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+          btn.style.opacity = '1';
+
+          setTimeout(() => {
+            alert('Thank you for applying to Amrutha Next Gen Solutions! Our professional counselor will contact you on WhatsApp shortly. 🚀');
+            form.reset();
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 800);
+        })
+        .catch(err => {
+          console.error('Submission Error:', err);
+          btn.disabled = false;
+          btn.innerHTML = originalText;
+          btn.style.opacity = '1';
+          alert('There was a small error. Please try again or use the WhatsApp button!');
+        });
+    }
+
+    // BROCHURE MODAL LOGIC
+    function downloadBrochure(e) {
+      if (e) e.preventDefault();
+      document.getElementById('brochure-modal').classList.add('open');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('open');
+    }
+
+    function handleBrochureSubmit(e) {
+      e.preventDefault();
+      alert('✅ Success! The brochure has been sent to your WhatsApp. Check it now!');
+      closeModal('brochure-modal');
+    }
+
+    // EXIT INTENT LOGIC
+    let exitPopupShown = false;
+    document.addEventListener('mouseleave', (e) => {
+      if (e.clientY < 0 && !exitPopupShown) {
+        document.getElementById('exit-popup').classList.add('open');
+        exitPopupShown = true;
+      }
+    });
+
+    // STATS COUNTER
+    const stats = document.querySelectorAll('.stat-num');
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = parseInt(entry.target.getAttribute('data-target'));
+          const prefix = entry.target.getAttribute('data-prefix') || '';
+          const suffix = entry.target.getAttribute('data-suffix') || '';
+          let count = 0;
+          const duration = 2000;
+          const increment = target / (duration / 16);
+
+          const updateCount = () => {
+            count += increment;
+            if (count < target) {
+              entry.target.innerHTML = prefix + Math.ceil(count).toLocaleString() + suffix;
+              requestAnimationFrame(updateCount);
+            } else {
+              entry.target.innerHTML = prefix + target.toLocaleString() + suffix;
+            }
+          };
+          updateCount();
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 1 });
+    stats.forEach(s => statsObserver.observe(s));
+
+    // SMOOTH ACTIVE NAV LINKS
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY + 100;
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (link) {
+          if (scrollY >= top && scrollY < top + height) {
+            document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '');
+            link.style.color = '#fff';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
